@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: ./docker/web
+    container_name: web
+    environment:
+      TZ: "Asia/Tokyo"
+    ports:
+      - "80:80"
+    volumes:
+      - ./app1:/app/app1
+    restart: always
